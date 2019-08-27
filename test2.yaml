@@ -1,0 +1,160 @@
+#test1:
+#  url: open/api/v1/provider/parcel/international/delivery/no
+#  data: [{"parcelNoType": "1000", "parcelNo": "e1299ea376564485961898a991457b15", "relatedNo": "20190428111"}]
+#test2:
+#  url: open/api/v1/provider/parcel/international/delivery/no
+#  data: [{"parcelNoType": "1000", "parcelNo": "e1299ea376564485961898a991457b15", "relatedNo": "20190428111"}]
+#test3:
+#  url: open/api/v1/provider/parcel/international/delivery/n
+#  data: [{"parcelNoType": "1000", "parcelNo": "a", "relatedNo": "1"}]
+#
+#test4:
+#  url: /open/api/v1/ecommerce/parcel/upload
+#  data: {"confirm": "True", "list": [{"netWeight": 2, "totalTax": 2.1,
+#                                     "routeNo": "4be81d2873e7465a936b8a64a06e6b6f",
+#                                     "itemAmount": 10,
+#                                     "onlineOrderNo": f.ean13(),
+#                                     "tradeCountry": "AU",
+#                                     "payerLegalName": "Tom",
+#                                     "payerIdType": "1",
+#                                     "payerIdNo": "210304199605281100005",
+#                                     "payerPhone": "15813213123",
+#                                     "paymentCompanyName": "alipay",
+#                                     "paymentOrderNo": "42000002612019032019626457892",
+#                                     "paymentTime": "2019-05-18T17:47:18.694+0800",
+#                                     "paymentAmount": 10.00,
+#                                     "recipientAddress": "AU XXX Road",
+#                                     "recipientPhone": "13634190830",
+#                                     "recipientName": "Tom",
+#                                     "recipientPrimaryAdministrative": "NSW",
+#                                     "recipientSecondAdministrative": "Sydney",
+#                                     "recipientThirdAdministrative": "XXX",
+#                                     "recipientPostcode": "2027",
+#                                     "recipientStreetNum": "1-002",
+#                                     "recipientCountryCode": "AU",
+#                                     "volume": 0.01,
+#                                     "description": "INOHERB",
+#                                     "nativeDescription": "INOHERB",
+#                                     "items": [{
+#                                                 "hsCode": "201905281100002",
+#                                                 "itemNo": "I201905281100002",
+#                                                 "productName": "INOHERB",
+#                                                 "nativeProductName": "相宜本草补水液",
+#                                                 "productDescription": "INOHERB",
+#                                                 "productUnit": "ml",
+#                                                 "url": "https://img14.360buyimg.com/n0/jfs/t1/32323/31/12109/291923/5cb6f9d2Ea90c2a10/faad6792afe7cc6d.jpg",
+#                                                 "origin": "CHINA",
+#                                                 "specification": "nostrud ullamco qui",
+#                                                 "netWeight": 2,
+#                                                 "grossWeight": "2.1",
+#                                                 "unitPrice": 10.00,
+#                                                 "quantity": 1,
+#                                                 "ext1": {
+#                                                   "barCode": "09020310"
+#                                                 }
+#                                               }]
+#                                    }]
+#}
+test5:
+  url: /openapi/v1/ecommerce/jsonrpc?
+  data: {
+    "jsonrpc": "2.0",
+    "method": "createParcel",
+    "params": [  {
+                   "routeCode":"UBI.CN2AU.AUPOST",
+                   "onlineOrderNo":f.ean13(),
+                   "facility":"230031",
+                   "lot":"parcelx20190612001",
+                   "skuNumber":"2",
+                   "volume":"0",
+                   "grossWeight":"2.1",
+                   "netWeight":"2",
+                   "itemAmount":"10",
+                   "tradeCountry":"AU",
+                   "payerLegalName":"付款人名称",
+                   "payerIdType":"1",
+                   "payerIdNo":"440501195305174406",
+                   "payerPhone":"15517377440",
+                   "payerIdPicture":"https://www.leangoo.com/kanban/task/downloadFile/2744320/bbe0132a64eed9ab/454618",
+                   "payerIdPicture2":"https://www.leangoo.com/kanban/task/downloadFile/2744320/bbe0132a64eed9ab/454618",
+                   "paymentCompanyName":"艾力巴巴",
+                   "paymentCompanyCode":"wlibaba",
+                   "paymentOrderNo":"wlibaba20190621",
+                   "paymentTime":"2019-06-01T08:59:08.853Z",
+                   "paymentAmount":"10",
+                   "senderIdType":"1",
+                   "senderIdNo":"440501195305174406",
+                   "senderIdcardFront":"https://www.leangoo.com/kanban/task/downloadFile/2744320/bbe0132a64eed9ab/454618",
+                   "senderIdcardBack":"https://www.leangoo.com/kanban/task/downloadFile/2744320/bbe0132a64eed9ab/454618",
+                   "senderCountryCode":"AUD",
+                   "senderPrimaryAdministrative":"北京市",
+                   "senderSecondAdministrative":"北京市",
+                   "senderAddress":"朝阳区",
+                   "senderStreetNum":"1024弄1栋",
+                   "senderPostcode":"codeem@163.com",
+                   "senderCompanyName":"elibaba",
+                   "senderName":"坤坤",
+                   "senderPhone":"13465596710",
+                   "senderEmail":"codeem@163.com",
+                   "recipientIdType":"1",
+                   "recipientIdNo":"41358965746685",
+                   "recipientCountryCode":"AUD",
+                   "recipientPrimaryAdministrative":"beijing",
+                   "recipientSecondAdministrative":"beijing",
+                   "recipientThirdAdministrative":"beijing",
+                   "recipientAddress":"1024弄1东",
+                   "recipientStreetNum":"1202",
+                   "recipientPostcode":"453500",
+                   "recipientCompanyName":"上海五幺店子",
+                   "recipientName":"前台",
+                   "recipientPhone":"745728369",
+                   "recipientEmail":"codeem@163.com",
+                   "returnPostcode":"codeem@163.com",
+                   "returnStreetNum":"1202",
+                   "returnAddress":"1204弄1栋",
+                   "returnSecondAdministrative":"beijing",
+                   "returnPrimaryAdministrative":"shanghai",
+                   "returnCountryCode":"AUD",
+                   "returnEmail":"codeem@163.com",
+                   "returnPhone":"745238269",
+                   "returnName":"旁白",
+                   "returnCompanyName":"个体商户",
+                   "returnType":"back_to_owner",
+                   "buyerEcAccount":"520",
+                   "buyerFullName":"520",
+                   "buyerPhone":"1867528269",
+                   "buyerIdType":"1",
+                   "buyerIdNo":"2478694584368",
+                   "buyerIdPicture":"https://www.leangoo.com/kanban/task/downloadFile/2744320/bbe0132a64eed9ab/454618",
+                   "buyerIdPicture2":"https://www.leangoo.com/kanban/task/downloadFile/2744320/bbe0132a64eed9ab/454618",
+                   "predictPutTime":"2019-06-09T08:59:08.853Z",
+                   "needSignature":"0",
+                   "ebcName":"wlibaba",
+                   "ebcCode":"SKU-1111",
+                   "ebpName":"巫妖",
+                   "ebpCode":"214587693",
+                   "isDangerous":false,
+                   "items":[{
+                              "itemNo":"I201905281100002",
+                              "hsCode":"201905281100002",
+                              "barCode":"6306982340931",
+                              "brand":"可口可乐",
+                              "productName":"可口可乐",
+                              "nativeProductName":"可口可乐",
+                              "productDescription":"三瓶可口可乐",
+                              "productUnit":"瓶",
+                              "url":"http://www.bejson.com/",
+                              "origin":"USA",
+                              "specification":"nostrud ullamco qui",
+                              "grossWeight":"2.1",
+                              "netWeight":"2",
+                              "unitPrice":"10",
+                              "currency":"CNY",
+                              "quantity":"1"
+                            }]
+                 },"false"],
+    "id": 1
+  }
+
+
+
